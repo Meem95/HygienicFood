@@ -12,6 +12,7 @@ class CategoryController extends Controller
     {
 
 
+
         return view('backend.Admin.product.category.index');
     }
 
