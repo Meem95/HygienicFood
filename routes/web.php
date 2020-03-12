@@ -19,9 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admin']],function(){
+Route::group(['middleware'=>['auth','admin']], function (){
+    Route::group(['as'=>'admin.','prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admin']],function(){
+        Route::resource('category','CategoryController');
+        Route::resource('subcategory', 'SubCategoryController');
+        Route::resource('brand','BrandController');
+    });
 
-    route::get('/dashboard','DashboardController@index')->name('dashboard');
+    route::get('/admin/dashboard','Admin\DashboardController@index')->name('admin.dashboard');
 });
 
 Route::group(['as'=>'user.','prefix'=>'user','namespace'=>'Frontend','middleware'=>['auth','user']],function(){
