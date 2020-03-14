@@ -12,9 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.master');
 });
 
+Route::get('/products', function () {
+    return view('frontend.product.index');
+});
+Route::get('/products/details', function () {
+    return view('frontend.product.details');
+});
+
+Route::get('/wishlist', function () {
+    return view('frontend.wishlist.index');
+});
 
 Auth::routes();
 

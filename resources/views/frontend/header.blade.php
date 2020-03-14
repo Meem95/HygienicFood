@@ -11,7 +11,7 @@
     <div class="container">
         <nav class="c-top-menu">
             <ul class="c-links c-theme-ul">
-                <li><a href="#" class="c-font-dark c-font-uppercase c-font-bold"><i class="fa fa-heart-o"></i> Wishlist</a></li>
+                <li><a href="{{'/wishlist'}}" class="c-font-dark c-font-uppercase c-font-bold"><i class="fa fa-heart-o"></i> Wishlist</a></li>
                 <li class="c-divider"></li>
                 <li><a href="#" class="c-font-uppercase c-font-bold c-font-dark">Support</a></li>
                 <li >
@@ -41,10 +41,8 @@
             </ul>
         </nav>
         <div class="c-brand">
-            <a href="index.html" class="c-logo">
-                <img src="../../assets/base/img/layout/logos/logo-3.png" alt="JANGO" class="c-desktop-logo">
-                <img src="../../assets/base/img/layout/logos/logo-3.png" alt="JANGO" class="c-desktop-logo-inverse">
-                <img src="../../assets/base/img/layout/logos/logo-3.png" alt="JANGO" class="c-mobile-logo">
+            <a href="{{'/'}}" class="c-logo">
+                <img src="/img/hf.gif" alt="Hygienic Food" class="c-desktop-logo">
             </a>
             <button class="c-topbar-toggler" type="button">
                 <i class="fa fa-ellipsis-v"></i>
@@ -81,7 +79,7 @@
             <nav class="c-mega-menu c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
                 <ul class="nav navbar-nav c-theme-nav">
                     <li class="c-active">
-                        <a href="javascript:;" class="c-link dropdown-toggle">Home
+                        <a href="{{'/'}}" class="c-link dropdown-toggle">Home
                             <span class="c-arrow c-toggler"></span>
                         </a>
                     </li>
@@ -91,15 +89,15 @@
                         </a>
                         <div class="dropdown-menu c-menu-type-mega c-menu-type-fullwidth" style="min-width: auto">
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-12">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <ul class="dropdown-menu c-menu-type-inline">
                                                 <li>
                                                     <h3>Accessories</h3>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:;">Watches</a>
+                                                    <a href="{{'/products'}}">Watches</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:;">Mens Belts</a>
@@ -132,7 +130,117 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li>
+                                                    <h3>Mens</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Suits</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Shirts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Pants</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Jeans</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sportswear</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li>
+                                                    <h3>Shoes</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sports Shoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sandals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Flip Flops</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Formal Shoes</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <h3>SUMMER DEALS</h3>
+                                                </li>
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <a href="javascript:;">Browse Collections - Up to 70% Off! </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-mobile">
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <h3>WINTER Collections</h3>
+                                                </li>
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <a href="javascript:;">Browse Collections - Wrap up with Fasion! </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li>
+                                                    <h3>Mens</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Suits</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Shirts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Pants</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Jeans</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sportswear</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li>
+                                                    <h3>Shoes</h3>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sports Shoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Sandals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Flip Flops</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">Formal Shoes</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline">
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <h3>SUMMER DEALS</h3>
+                                                </li>
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <a href="javascript:;">Browse Collections - Up to 70% Off! </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-mobile">
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <h3>WINTER Collections</h3>
+                                                </li>
+                                                <li class="c-mega-menu-offers-mobile">
+                                                    <a href="javascript:;">Browse Collections - Wrap up with Fasion! </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
                                             <ul class="dropdown-menu c-menu-type-inline">
                                                 <li>
                                                     <h3>Mens</h3>
@@ -189,126 +297,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 c-mega-menu-offers-desktop">
-                                    <ul class="c-mega-menu-offers-img-set">
-                                        <li class="c-mega-menu-offers-img">
-                                            <a href="#"><img src="../../assets/base/img/content/shop/12.jpg" class="c-offers-img-1"/></a>
-                                            <div class="c-mega-menu-offers-overlay">
-                                                <h4 class="c-mega-menu-offers-overlay-title c-font-white c-font-bold c-font-uppercase">SUMMER DEALS</h4>
-                                                <p class="c-mega-menu-offers-overlay-desc c-font-white">Up to 70% OFF</p>
-                                                <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Collection</a>
-                                            </div>
-                                        </li>
-                                        <li class="c-mega-menu-offers-img">
-                                            <a href="#"><img src="../../assets/base/img/content/shop/44.jpg" class="c-offers-img-2"/></a>
-                                            <div class="c-mega-menu-offers-overlay">
-                                                <h4 class="c-mega-menu-offers-overlay-title c-font-white c-font-bold c-font-uppercase">WINTER COLLECTION</h4>
-                                                <p class="c-mega-menu-offers-overlay-desc c-font-white">Wrap up with Fashion</p>
-                                                <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Collection</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="javascript:;" class="c-link dropdown-toggle">Collections
+                        <a href="javascript:;" class="c-link dropdown-toggle">Blogs
                             <span class="c-arrow c-toggler"></span>
                         </a>
-                        <ul class="dropdown-menu c-menu-type-mega c-menu-type-fullwidth c-mega-menu-offers-mobile" style="min-width: auto">
-                            <li class="c-mega-menu-collections-col">
-                                <ul class="dropdown-menu c-menu-type-inline">
-                                    <li>
-                                        <a href="javascript:;">Ladies</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">Mens</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">Sports</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">Shoes</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">Accessories</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="dropdown-menu c-menu-type-mega c-menu-type-fullwidth" style="min-width: auto">
-                            <li class="c-mega-menu-collections-col c-mega-menu-offers-desktop">
-                                <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-img-set">
-                                    <li>
-                                        <h3 class="c-mega-menu-shop-cat-title c-center c-font-bold c-font-uppercase">Ladies</h3>
-                                    </li>
-                                    <li class="c-mega-menu-offers-img">
-                                        <img src="../../assets/base/img/content/shop2/13.jpg" class="c-offers-img-1"/>
-                                        <div class="c-mega-menu-offers-overlay">
-                                            <p class="c-mega-menu-offers-overlay-desc c-font-white">Dress up for the occasion</p>
-                                            <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Ladies</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="c-mega-menu-collections-col c-mega-menu-offers-desktop">
-                                <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-img-set">
-                                    <li>
-                                        <h3 class="c-mega-menu-shop-cat-title c-center c-font-bold c-font-uppercase">Mens</h3>
-                                    </li>
-                                    <li class="c-mega-menu-offers-img">
-                                        <img src="../../assets/base/img/content/shop2/31.jpg" class="c-offers-img-1"/>
-                                        <div class="c-mega-menu-offers-overlay">
-                                            <p class="c-mega-menu-offers-overlay-desc c-font-white">Style it up</p>
-                                            <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Mens</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="c-mega-menu-collections-col c-mega-menu-offers-desktop">
-                                <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-img-set">
-                                    <li>
-                                        <h3 class="c-mega-menu-shop-cat-title c-center c-font-bold c-font-uppercase">SPORTS</h3>
-                                    </li>
-                                    <li class="c-mega-menu-offers-img">
-                                        <img src="../../assets/base/img/content/shop2/12.jpg" class="c-offers-img-1"/>
-                                        <div class="c-mega-menu-offers-overlay">
-                                            <p class="c-mega-menu-offers-overlay-desc c-font-white">Comfort and Form</p>
-                                            <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Sports</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="c-mega-menu-collections-col c-mega-menu-offers-desktop">
-                                <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-img-set">
-                                    <li>
-                                        <h3 class="c-mega-menu-shop-cat-title c-center c-font-bold c-font-uppercase">Shoes</h3>
-                                    </li>
-                                    <li class="c-mega-menu-offers-img c-mega-menu-offers-desktop">
-                                        <img src="../../assets/base/img/content/shop2/51.jpg" class="c-offers-img-1"/>
-                                        <div class="c-mega-menu-offers-overlay">
-                                            <p class="c-mega-menu-offers-overlay-desc c-font-white">Walking Tall</p>
-                                            <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Browse Shoes</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="c-mega-menu-collections-col c-mega-menu-offers-desktop">
-                                <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-img-set">
-                                    <li>
-                                        <h3 class="c-mega-menu-shop-cat-title c-center c-font-bold c-font-uppercase">Accessories</h3>
-                                    </li>
-                                    <li class="c-mega-menu-offers-img">
-                                        <img src="../../assets/base/img/content/shop2/79.jpg" class="c-offers-img-1"/>
-                                        <div class="c-mega-menu-offers-overlay">
-                                            <p class="c-mega-menu-offers-overlay-desc c-font-white">The Latest in Gadgets</p>
-                                            <a href="#" class="btn c-btn-uppercase c-btn-border-2x c-btn-bold c-btn-white c-btn-square c-font-uppercase ">Accessories</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="javascript:;" class="c-link dropdown-toggle">About
