@@ -118,9 +118,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="" class="c-link dropdown-toggle">Blogs
+
+
+
+                            <a href="{{'/blog'}}" class="c-link dropdown-toggle">Blogs </a>
+
                             <span class="c-arrow c-toggler"></span>
-                        </a>
+
                     </li>
                     <li>
                         <a href="javascript:;" class="c-link dropdown-toggle">About
@@ -185,4 +189,15 @@
         </div>
         <!-- END: CART MENU --><!-- END: LAYOUT/HEADERS/QUICK-CART -->
     </div>
+    <style>
+        marquee {
+            width: 100%;
+            padding: 20px 0;
+            height: 100%;
+            background-color: lightblue;
+        }
+    </style>
+    <marquee direction="scroll">
+        This is test marquee !! Hi Kutti :D !! Ki koros? :D !!
+    </marquee>
 </div>
