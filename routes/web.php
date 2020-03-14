@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('frontend.master');
 });
 
+Route::get('/blog', function () {
+    return view('frontend.blog.index');
+});
+Route::get('/blog/details', function () {
+    return view('frontend.blog.details');
+});
+
+
 Route::get('/products', function () {
     return view('frontend.product.index');
 });
