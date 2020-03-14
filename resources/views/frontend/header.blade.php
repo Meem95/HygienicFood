@@ -17,14 +17,19 @@
                 <li >
                     @if (Route::has('login'))
                         <div class="top-right links">
-                            @auth
-                                <a href="{{ url('/home') }}"><b>Home</b></a>
+
+                            @if (Auth::check() && Auth::user()->role_id==1)
+                                <a href="{{ url('/home') }}"><b>{{Auth::user()->name}}</b></a>
+
+                            @elseif(Auth::check() && Auth::user()->role_id==2)
+                                <a href="{{ url('/home') }}"><b>{{Auth::user()->name}}</b></a>
                             @else
-                                <a href="{{ route('login') }}"><b>Login</b></a>
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}"><b> Register</b></a>
-                                @endif
-                            @endauth
+                                <a href="{{ route('login') }}"><b>Login | </b></a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"><b> Register</b></a>
+                            @endif
+
+                    @endif
                         </div>
                     @endif
                 </li>
@@ -106,194 +111,6 @@
                                                     <a href="javascript:;">Mens Ties</a>
                                                 </li>
                                             </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Ladies</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Tops</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Dresses</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Leggings</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Slim Jeans</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sportswear</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Swimwear</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Mens</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Suits</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Pants</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Jeans</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sportswear</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Shoes</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sports Shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Flip Flops</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Formal Shoes</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>SUMMER DEALS</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Up to 70% Off! </a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-mobile">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>WINTER Collections</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Wrap up with Fasion! </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Mens</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Suits</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Pants</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Jeans</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sportswear</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Shoes</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sports Shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Flip Flops</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Formal Shoes</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>SUMMER DEALS</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Up to 70% Off! </a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-mobile">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>WINTER Collections</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Wrap up with Fasion! </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Mens</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Suits</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Pants</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Jeans</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sportswear</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li>
-                                                    <h3>Shoes</h3>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sports Shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Flip Flops</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Formal Shoes</a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>SUMMER DEALS</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Up to 70% Off! </a>
-                                                </li>
-                                            </ul>
-                                            <ul class="dropdown-menu c-menu-type-inline c-mega-menu-offers-mobile">
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <h3>WINTER Collections</h3>
-                                                </li>
-                                                <li class="c-mega-menu-offers-mobile">
-                                                    <a href="javascript:;">Browse Collections - Wrap up with Fasion! </a>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -301,7 +118,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="javascript:;" class="c-link dropdown-toggle">Blogs
+                        <a href="" class="c-link dropdown-toggle">Blogs
                             <span class="c-arrow c-toggler"></span>
                         </a>
                     </li>

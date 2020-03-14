@@ -68,11 +68,11 @@
 
                     </ul>
                 </li>
-                <li class="nav-item has-treeview {{Request::is ('admin/blog-category*') ? 'menu-open' : ''}} ">
+                <li class="nav-item has-treeview {{Request::is ('admin/slider*') ? 'menu-open' : ''}} ">
                     <a href="" class="nav-link">
                         <i class="fab fa-product-hunt"></i>
                         <p> Blog
-                            <i class="fas fa-angle-left right"></i>
+
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
@@ -91,6 +91,13 @@
 
 
                     </ul>
+                </li>       <li class="nav-item has-treeview {{Request::is ('admin/blog-category*') ? 'menu-open' : ''}} ">
+                    <a href="{{route('admin.slider.index')}}" class="nav-link">
+                        <i class="fab fa-product-hunt"></i>
+                        <p> Sliders
+                        </p>
+                    </a>
+
                 </li>
 
             </ul>
