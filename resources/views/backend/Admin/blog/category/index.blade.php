@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Category')
+@section('title','Blog-Category')
 @push('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
@@ -16,7 +16,7 @@
                         <div class="card-header">
                             <h3 class="card-title">All Category</h3>
                             <div class="float-right">
-                                <a href="{{route('admin.category.create')}}">
+                                <a href="{{route('admin.blog-category.create')}}">
                                     <button class="btn btn-success">
                                         <i class="fa fa-plus-circle"></i>
                                         Add
@@ -30,14 +30,14 @@
                                 <thead>
                                 <tr>
                                     <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th>Blog-Category Name</th>
                                     <th>Slug</th>
                                     <th>Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $key=>$category)
+                                @foreach($blogCategories as $key=>$category)
                                     <tr>
 
 
@@ -45,14 +45,14 @@
                                     <td>{{$category-> name}}</td>
                                     <td>{{$category-> slug}}</td>
                                     <td>
-                                        <a class="btn btn-info waves-effect" href="{{route('admin.category.edit',$category->id)}}">
+                                        <a class="btn btn-info waves-effect" href="{{route('admin.blog-category.edit',$category->id)}}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <button class="btn btn-danger waves-effect" type="button"
                                                 onclick="deleteCat({{$category->id}})">
                                             <i class="fa fa-trash"></i>
                                         </button>
-                                        <form id="delete-form-{{$category->id}}" action="{{route('admin.category.destroy',$category->id)}}" method="POST" style="display: none;">
+                                        <form id="delete-form-{{$category->id}}" action="{{route('admin.blog-category.destroy',$category->id)}}" method="POST" style="display: none;">
                                             @csrf
                                             @method('DELETE')
                                         </form>
@@ -66,7 +66,7 @@
                                 <tfoot>
                                 <tr>
                                     <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th>Blog-Category Name</th>
                                     <th>Slug</th>
                                     <th>Action</th>
                                 </tr>

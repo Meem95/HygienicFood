@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Edit')
+@section('title','Blog-Create')
 @push('css')
 
 @endpush
@@ -18,9 +18,9 @@
                                     <!-- general form elements -->
                                     <div class="card card-info card-outline">
                                         <div class="card-header">
-                                            <h3 class="card-title float-left">Update Category</h3>
+                                            <h3 class="card-title float-left">Add Blog-Post</h3>
                                             <div class="float-right">
-                                                <a href="{{route('admin.category.index')}}">
+                                                <a href="{{route('admin.blog-post.index')}}">
                                                     <button class="btn btn-success">
                                                         <i class="fa fa-backward"> </i>
                                                         Back
@@ -30,13 +30,28 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <!-- form start -->
-                                        <form role="form" action="{{route('admin.category.update',$categories->id)}}" method="post">
+                                        <form role="form" action="{{route('admin.blog-post.store')}}" method="post" enctype="multipart/form-data">
                                             @csrf
-                                            @method("PUT")
                                             <div class="card-body">
                                                 <div class="form-group">
-                                                    <label for="name">Category Name</label>
-                                                    <input type="name" class="form-control" name="name" value="{{$categories->name}}" id="name" placeholder="Enter Department Name">
+                                                    <label for="title">Post Title</label>
+                                                    <input type="text" class="form-control" name="title" id="title" placeholder="Enter Post Title">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="title">Post Title</label>
+                                                    <select name="category_id" id="category_id" class="form-control select2">
+                                                        @foreach($categories as $cat)
+                                                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="description">Post Description</label>
+                                                    <textarea type="text" class="form-control textarea" name="description" id="description" placeholder="Enter Post Title"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="image">Post Image</label>
+                                                    <input type="file" class="form-control-file" name="image" id="image">
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->

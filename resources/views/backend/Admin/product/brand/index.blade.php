@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Category')
+@section('title','Brand')
 @push('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
@@ -14,9 +14,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">All Category</h3>
+                            <h3 class="card-title">Brand</h3>
                             <div class="float-right">
-                                <a href="{{route('admin.category.create')}}">
+                                <a href="{{route('admin.brand.create')}}">
                                     <button class="btn btn-success">
                                         <i class="fa fa-plus-circle"></i>
                                         Add
@@ -29,30 +29,30 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th></th>
+                                    <th>Name</th>
                                     <th>Slug</th>
                                     <th>Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $key=>$category)
+                                @foreach($brands as $key=>$brand)
                                     <tr>
 
 
                                     <td>{{$key + 1}}</td>
-                                    <td>{{$category-> name}}</td>
-                                    <td>{{$category-> slug}}</td>
+                                    <td>{{$brand-> name}}</td>
+                                    <td>{{$brand-> slug}}</td>
                                     <td>
-                                        <a class="btn btn-info waves-effect" href="{{route('admin.category.edit',$category->id)}}">
+                                        <a class="btn btn-info waves-effect" href="{{route('admin.brand.edit',$brand->id)}}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <button class="btn btn-danger waves-effect" type="button"
-                                                onclick="deleteCat({{$category->id}})">
+                                                onclick="deleteCat({{$brand->id}})">
                                             <i class="fa fa-trash"></i>
                                         </button>
-                                        <form id="delete-form-{{$category->id}}" action="{{route('admin.category.destroy',$category->id)}}" method="POST" style="display: none;">
+                                        <form id="delete-form-{{$brand->id}}" action="{{route('admin.brand.destroy',$brand->id)}}" method="POST" style="display: none;">
                                             @csrf
                                             @method('DELETE')
                                         </form>
@@ -65,8 +65,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th>Name</th>
                                     <th>Slug</th>
                                     <th>Action</th>
                                 </tr>

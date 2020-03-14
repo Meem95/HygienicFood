@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Category')
+@section('title','SubCategory')
 @push('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
@@ -14,9 +14,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">All Category</h3>
+                            <h3 class="card-title">Sub-Category</h3>
                             <div class="float-right">
-                                <a href="{{route('admin.category.create')}}">
+                                <a href="{{route('admin.subcategory.create')}}">
                                     <button class="btn btn-success">
                                         <i class="fa fa-plus-circle"></i>
                                         Add
@@ -29,30 +29,30 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th>#ID</th>
+                                    <th>Name</th>
+                                    <th>Sub-Category</th>
                                     <th>Slug</th>
                                     <th>Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $key=>$category)
+                                @foreach($subCategories as $key=>$subCategory)
                                     <tr>
-
-
                                     <td>{{$key + 1}}</td>
-                                    <td>{{$category-> name}}</td>
-                                    <td>{{$category-> slug}}</td>
+                                    <td>{{$subCategory->name}}</td>
+                                    <td>{{$subCategory->category->name}}</td>
+                                    <td>{{$subCategory->slug}}</td>
                                     <td>
-                                        <a class="btn btn-info waves-effect" href="{{route('admin.category.edit',$category->id)}}">
+                                        <a class="btn btn-info waves-effect" href="{{route('admin.subcategory.edit',$subCategory->id)}}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <button class="btn btn-danger waves-effect" type="button"
-                                                onclick="deleteCat({{$category->id}})">
+                                                onclick="deleteCat({{$subCategory->id}})">
                                             <i class="fa fa-trash"></i>
                                         </button>
-                                        <form id="delete-form-{{$category->id}}" action="{{route('admin.category.destroy',$category->id)}}" method="POST" style="display: none;">
+                                        <form id="delete-form-{{$subCategory->id}}" action="{{route('admin.subcategory.destroy',$subCategory->id)}}" method="POST" style="display: none;">
                                             @csrf
                                             @method('DELETE')
                                         </form>
@@ -65,8 +65,9 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>#Id</th>
-                                    <th>Category Name</th>
+                                    <th>#ID</th>
+                                    <th>Name</th>
+                                    <th>Sub-Category</th>
                                     <th>Slug</th>
                                     <th>Action</th>
                                 </tr>

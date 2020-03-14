@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{--toastr js--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     @stack('css')
 </head>
 <body>
@@ -69,6 +71,19 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="{{asset('backend/dist/js/pages/dashboard2.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
+
+<script>
+    @if($errors->any())
+    @foreach($errors->all() as $error )
+    toastr.error('{{$error}}','Error',{
+        closeButton:true,
+        progressBar:true
+    });
+    @endforeach
+    @endif
+</script>
 @stack('js')
 </body>
 </html>

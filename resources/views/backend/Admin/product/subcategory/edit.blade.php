@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Edit')
+@section('title','Create')
 @push('css')
 
 @endpush
@@ -18,9 +18,9 @@
                                     <!-- general form elements -->
                                     <div class="card card-info card-outline">
                                         <div class="card-header">
-                                            <h3 class="card-title float-left">Update Category</h3>
+                                            <h3 class="card-title float-left">Update SubCategory</h3>
                                             <div class="float-right">
-                                                <a href="{{route('admin.category.index')}}">
+                                                <a href="{{route('admin.subcategory.index')}}">
                                                     <button class="btn btn-success">
                                                         <i class="fa fa-backward"> </i>
                                                         Back
@@ -30,13 +30,21 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <!-- form start -->
-                                        <form role="form" action="{{route('admin.category.update',$categories->id)}}" method="post">
+                                        <form role="form" action="{{route('admin.subcategory.update',$subCategories->id)}}" method="post">
                                             @csrf
                                             @method("PUT")
                                             <div class="card-body">
                                                 <div class="form-group">
-                                                    <label for="name">Category Name</label>
-                                                    <input type="name" class="form-control" name="name" value="{{$categories->name}}" id="name" placeholder="Enter Department Name">
+                                                    <label for="name">Sub-Category Name</label>
+                                                    <input type="name" class="form-control" name="name" value="{{$subCategories->name}}" id="name" placeholder="Enter  Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="category_id">Category Name</label>
+                                                    <select name="category_id" id="category_id" class="form-control">
+                                                        @foreach($categories as $category)
+                                                            <option value="{{$category->id}}" {{($subCategories->category_id == $category->id)  ? 'selected' : ''}}>{{$category->name}}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->

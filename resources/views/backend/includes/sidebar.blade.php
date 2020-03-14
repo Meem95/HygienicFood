@@ -48,13 +48,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="{{route('admin.subcategory.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sub-Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="{{route('admin.brand.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Brand</p>
                             </a>
@@ -68,30 +68,30 @@
 
                     </ul>
                 </li>
-{{--                <li class="nav-item has-treeview {{Request::is ('admin/category*') ? 'menu-open' : ''}} ">--}}
-{{--                    <a href="#" class="nav-link">--}}
-{{--                        <i class="fab fa-product-hunt"></i>--}}
-{{--                        <p> Blog--}}
-{{--                            <i class="fas fa-angle-left right"></i>--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                    <ul class="nav nav-treeview">--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="{{route('admin.category.index')}}" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Category</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="nav-item">--}}
-{{--                            <a href="pages/layout/top-nav.html" class="nav-link">--}}
-{{--                                <i class="far fa-circle nav-icon"></i>--}}
-{{--                                <p>Post</p>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                <li class="nav-item has-treeview {{Request::is ('admin/blog-category*') ? 'menu-open' : ''}} ">
+                    <a href="" class="nav-link">
+                        <i class="fab fa-product-hunt"></i>
+                        <p> Blog
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.blog-category.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blog Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.blog-post.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blog Post</p>
+                            </a>
+                        </li>
 
 
-{{--                    </ul>--}}
-{{--                </li>--}}
+                    </ul>
+                </li>
 
             </ul>
         </nav>

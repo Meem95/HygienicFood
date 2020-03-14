@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Category')
+@section('title','Blog-Category')
 @push('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
@@ -14,9 +14,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">All Category</h3>
+                            <h3 class="card-title">All Post</h3>
                             <div class="float-right">
-                                <a href="{{route('admin.category.create')}}">
+                                <a href="{{route('admin.blog-post.create')}}">
                                     <button class="btn btn-success">
                                         <i class="fa fa-plus-circle"></i>
                                         Add
@@ -30,29 +30,34 @@
                                 <thead>
                                 <tr>
                                     <th>#Id</th>
-                                    <th>Category Name</th>
-                                    <th>Slug</th>
+                                    <th>Blog-Post Name</th>
+                                    <th>Category name</th>
+                                    <th>Image</th>
                                     <th>Action</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $key=>$category)
+                                @foreach($blogPosts as $key=>$post)
+                                    @php
+                                    $category=\App\BlogCategory::find($post->blog_category_id);
+
+                                    @endphp
                                     <tr>
-
-
                                     <td>{{$key + 1}}</td>
-                                    <td>{{$category-> name}}</td>
-                                    <td>{{$category-> slug}}</td>
+                                    <td>{{$post-> title}}</td>
+                                    <td>{{$category->name}}</td>
+                                    <td><img src="{{asset('uploads/post/'.$post->image)}}" width="80" height="40" alt="{{$post->image}}"> </td>
+
                                     <td>
-                                        <a class="btn btn-info waves-effect" href="{{route('admin.category.edit',$category->id)}}">
+                                        <a class="btn btn-info waves-effect" href="{{route('admin.blog-post.edit',$post->id)}}">
                                             <i class="fa fa-edit"></i>
                                         </a>
                                         <button class="btn btn-danger waves-effect" type="button"
-                                                onclick="deleteCat({{$category->id}})">
+                                                onclick="deleteCat({{$post->id}})">
                                             <i class="fa fa-trash"></i>
                                         </button>
-                                        <form id="delete-form-{{$category->id}}" action="{{route('admin.category.destroy',$category->id)}}" method="POST" style="display: none;">
+                                        <form id="delete-form-{{$post->id}}" action="{{route('admin.blog-post.destroy',$post->id)}}" method="POST" style="display: none;">
                                             @csrf
                                             @method('DELETE')
                                         </form>
@@ -66,8 +71,9 @@
                                 <tfoot>
                                 <tr>
                                     <th>#Id</th>
-                                    <th>Category Name</th>
-                                    <th>Slug</th>
+                                    <th>Blog-Post Name</th>
+                                    <th>Category name</th>
+                                    <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                                 </tfoot>

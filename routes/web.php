@@ -25,6 +25,8 @@ Route::group(['middleware'=>['auth','admin']], function (){
         Route::resource('category','CategoryController');
         Route::resource('subcategory', 'SubCategoryController');
         Route::resource('brand','BrandController');
+        Route::resource('blog-category','BlogCategoryController');
+        Route::resource('blog-post','BlogPostController');
     });
 
     route::get('/admin/dashboard','Admin\DashboardController@index')->name('admin.dashboard');

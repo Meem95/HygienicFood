@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Edit')
+@section('title','Create')
 @push('css')
 
 @endpush
@@ -11,6 +11,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Create New Brands</h3>
+                        </div>
                         <!-- Main content -->
                         <section class="content">
                             <div class="row">
@@ -18,9 +21,9 @@
                                     <!-- general form elements -->
                                     <div class="card card-info card-outline">
                                         <div class="card-header">
-                                            <h3 class="card-title float-left">Update Category</h3>
+                                            <h3 class="card-title float-left">Add Brands</h3>
                                             <div class="float-right">
-                                                <a href="{{route('admin.category.index')}}">
+                                                <a href="{{route('admin.brand.index')}}">
                                                     <button class="btn btn-success">
                                                         <i class="fa fa-backward"> </i>
                                                         Back
@@ -30,13 +33,12 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <!-- form start -->
-                                        <form role="form" action="{{route('admin.category.update',$categories->id)}}" method="post">
+                                        <form role="form" action="{{route('admin.brand.store')}}" method="post">
                                             @csrf
-                                            @method("PUT")
                                             <div class="card-body">
                                                 <div class="form-group">
-                                                    <label for="name">Category Name</label>
-                                                    <input type="name" class="form-control" name="name" value="{{$categories->name}}" id="name" placeholder="Enter Department Name">
+                                                    <label for="name">Brands Name</label>
+                                                    <input type="name" class="form-control" name="name" id="name" placeholder="Enter brand Name">
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->
