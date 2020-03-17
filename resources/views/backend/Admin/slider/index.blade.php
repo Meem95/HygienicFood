@@ -42,8 +42,8 @@
 
 
                                     <td>{{$key + 1}}</td>
-                                    <td>{{$slider-> $slider}}</td>
-                                    <td>{{$slider-> slug}}</td>
+                                    <td>{{$slider->title}}</td>
+                                    <td><img src="{{'uploads/slider/'.$slider->image}}" alt=""></td>
                                     <td>
                                         <a class="btn btn-info waves-effect" href="{{route('admin.slider.edit',$slider->id)}}">
                                             <i class="fa fa-edit"></i>

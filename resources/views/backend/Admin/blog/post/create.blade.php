@@ -38,7 +38,7 @@
                                                     <input type="text" class="form-control" name="title" id="title" placeholder="Enter Post Title">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="title">Post Title</label>
+                                                    <label for="title">Category Title</label>
                                                     <select name="category_id" id="category_id" class="form-control select2">
                                                         @foreach($categories as $cat)
                                                             <option value="{{$cat->id}}">{{$cat->name}}</option>

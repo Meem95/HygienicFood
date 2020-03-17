@@ -118,21 +118,17 @@
                         </div>
                     </li>
                     <li>
-
-
-
-                            <a href="{{'/blog'}}" class="c-link dropdown-toggle">Blogs </a>
-
+                            <a href="{{route('blog')}}" class="c-link dropdown-toggle">Blogs </a>
                             <span class="c-arrow c-toggler"></span>
 
                     </li>
                     <li>
-                        <a href="javascript:;" class="c-link dropdown-toggle">About
+                        <a href="{{route('about')}}" class="c-link dropdown-toggle">About
                             <span class="c-arrow c-toggler"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="c-link dropdown-toggle">Contact
+                        <a href="{{route('contact')}}" class="c-link dropdown-toggle">Contact
                             <span class="c-arrow c-toggler"></span>
                         </a>
                     </li>

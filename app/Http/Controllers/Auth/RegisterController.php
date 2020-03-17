@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo;
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -38,13 +37,6 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        if (Auth::check() && Auth::user()->role_id==1){
-            $this->redirectTo = route('admin.dashboard');
-        }
-        elseif (Auth::check() && Auth::user()->role_id==2){
-
-            $this->redirectTo = route('user.dashboard');
-        }
         $this->middleware('guest');
     }
 

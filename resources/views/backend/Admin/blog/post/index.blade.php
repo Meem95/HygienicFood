@@ -47,7 +47,7 @@
                                     <td>{{$key + 1}}</td>
                                     <td>{{$post-> title}}</td>
                                     <td>{{$category->name}}</td>
-                                    <td><img src="{{asset('uploads/post/'.$post->image)}}" width="80" height="40" alt="{{$post->image}}"> </td>
+                                    <td> <img src="{{asset('uploads/post/'.$post->image)}}" width="80" height="40" alt=""> </td>
 
                                     <td>
                                         <a class="btn btn-info waves-effect" href="{{route('admin.blog-post.edit',$post->id)}}">

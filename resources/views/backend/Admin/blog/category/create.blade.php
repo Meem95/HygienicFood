@@ -30,12 +30,12 @@
                                         </div>
                                         <!-- /.card-header -->
                                         <!-- form start -->
-                                        <form role="form" action="{{route('admin.blog-category.update',$blogCategory->id)}}" method="post">
+                                        <form role="form" action="{{route('admin.blog-category.store')}}" method="post">
                                             @csrf
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="name">Blog-Category Name</label>
-                                                    <input type="name" class="form-control" name="name" value="{{$blogCategory->name}}" id="name" placeholder="Enter Department Name">
+                                                    <input type="name" class="form-control" name="name" id="name" placeholder="Enter Department Name">
                                                 </div>
                                             </div>
                                             <!-- /.card-body -->

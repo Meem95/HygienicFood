@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('title','Products')
 @push('css')
+
 @endpush
 
 @section('body')
